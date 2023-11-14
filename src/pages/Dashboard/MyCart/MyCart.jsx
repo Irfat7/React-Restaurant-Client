@@ -1,8 +1,11 @@
-import React from 'react';
+import { Link } from 'react-router-dom';
 import { useCart } from '../../../hooks/useCart';
 
 const MyCart = () => {
     const [cart, refetch, isCartLoading] = useCart()
+    if (isCartLoading) {
+        return <p>Your Cart Loading</p>
+    }
     let price = cart.reduce((sum, item) => sum + item.price, 0)
     const handleDelete = (id) => {
         fetch(`http://localhost:5000/carts/${id}`, {
@@ -19,15 +22,12 @@ const MyCart = () => {
                 }
             })
     }
-    if(isCartLoading){
-        return <p>Your Cart Loading</p>
-    }
     return (
         <div className='text-black'>
             <div>
                 <h3>Total items {cart.length}</h3>
                 <h3>Total Price ${price}</h3>
-                <button className='btn bg-[#D1A054] text-black text-white font-bold'>Proceed to Pay</button>
+                {cart.length > 0 && <Link to='/dashboard/payment' className='btn bg-[#D1A054] text-black text-white font-bold'>Proceed to Pay</Link>}
             </div>
             <div className="overflow-x-auto">
                 <table className="table">

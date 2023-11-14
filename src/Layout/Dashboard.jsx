@@ -23,13 +23,13 @@ const Dashboard = () => {
                         {/* Sidebar content here */}
                         {
                             isAdmin.admin ? <>
-                                <li><NavLink className={({ isActive }) => (isActive ? 'text-white' : '')} to='/dashboard/mycart3'>Admin Home</NavLink></li>
+                                <li><NavLink className={({ isActive }) => (isActive ? 'text-white' : '')} to='/dashboard/adminhome'>Admin Home</NavLink></li>
                                 <li><NavLink className={({ isActive }) => (isActive ? 'text-white' : '')} to='/dashboard/additems'>Add Items</NavLink></li>
                                 <li><NavLink className={({ isActive }) => (isActive ? 'text-white' : '')} to='/dashboard/manageitems'>Manage Items</NavLink></li>
                                 <li><NavLink className={({ isActive }) => (isActive ? 'text-white' : '')} to='/dashboard/mycart'>Manage Bookings</NavLink></li>
                                 <li><NavLink className={({ isActive }) => (isActive ? 'text-white' : '')} to='/dashboard/allusers'>All Users</NavLink></li>
                             </> : <>
-                                <li><NavLink className={({ isActive }) => (isActive ? 'text-white' : '')} to='/dashboard/mycart3'>User Home</NavLink></li>
+                                <li><NavLink className={({ isActive }) => (isActive ? 'text-white' : '')} to='/dashboard/userhome'>User Home</NavLink></li>
                                 <li><NavLink className={({ isActive }) => (isActive ? 'text-white' : '')} to='/dashboard/mycart2'>Reservation</NavLink></li>
                                 <li><NavLink className={({ isActive }) => (isActive ? 'text-white' : '')} to='/dashboard/mycart1'>Payment History</NavLink></li>
                                 <li><NavLink className={({ isActive }) => (isActive ? 'text-white' : '')} to='/dashboard/mycart'>My Cart</NavLink></li>

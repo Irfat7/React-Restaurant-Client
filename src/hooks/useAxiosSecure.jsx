@@ -3,14 +3,12 @@ import { useContext } from 'react';
 import { AuthContext } from '../providers/AuthProvider';
 import axios from 'axios';
 
-//used in allusers.jsx
+const axiosInstance = axios.create({
+    baseURL: 'http://localhost:5000/', // Replace with your API URL
+});
 
 export const useAxiosSecure = () => {
     const { logOut } = useContext(AuthContext)
-
-    const axiosInstance = axios.create({
-        baseURL: 'http://localhost:5000/', // Replace with your API URL
-    });
 
     // Add a request interceptor
     axiosInstance.interceptors.request.use(
