@@ -8,7 +8,7 @@ const MyCart = () => {
     }
     let price = cart.reduce((sum, item) => sum + item.price, 0)
     const handleDelete = (id) => {
-        fetch(`http://localhost:5000/carts/${id}`, {
+        fetch(`https://react-restaurant-server-sable.vercel.app/carts/${id}`, {
             method: 'DELETE'
         })
             .then(res => res.json())

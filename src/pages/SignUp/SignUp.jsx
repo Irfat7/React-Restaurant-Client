@@ -30,7 +30,7 @@ const SignUp = () => {
                     updateUserProfile(data.name)
                         .then(() => {
                             console.log('profile updated successfully')
-                            fetch('http://localhost:5000/users', {
+                            fetch('https://react-restaurant-server-sable.vercel.app/users', {
                                 method: 'POST',
                                 headers: {
                                     "Content-Type": "application/json",

@@ -10,7 +10,7 @@ const FoodCard = ({ item }) => {
     const addToCart = item => {
         if (user) {
             const cartItem = { cartId: _id, image, price, recipe, name, email: user?.email }
-            fetch('http://localhost:5000/carts', {
+            fetch('https://react-restaurant-server-sable.vercel.app/carts', {
                 method: 'POST',
                 headers: {
                     "Content-Type": "application/json",

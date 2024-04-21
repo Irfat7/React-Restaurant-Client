@@ -14,7 +14,7 @@ const AllUsers = () => {
 
     const handleRole = (id, currentRole) => {
         let role = currentRole === undefined || currentRole === 'default' ? 'admin' : 'default'
-        fetch(`http://localhost:5000/users/admin/${id}?role=${role}`, {
+        fetch(`https://react-restaurant-server-sable.vercel.app/users/admin/${id}?role=${role}`, {
             method: 'PATCH'
         })
             .then(res => res.json())

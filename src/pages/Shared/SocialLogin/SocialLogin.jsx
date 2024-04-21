@@ -16,7 +16,7 @@ const SocialLogin = () => {
                     name: loggedUser.displayName,
                     email: loggedUser.email
                 }
-                fetch('http://localhost:5000/users', {
+                fetch('https://react-restaurant-server-sable.vercel.app/users', {
                     method: 'POST',
                     headers: {
                         "Content-Type": "application/json",

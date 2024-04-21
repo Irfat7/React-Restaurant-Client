@@ -9,7 +9,7 @@ export const useAdmin = () => {
   const { data: isAdmin, isLoading } = useQuery({
     queryKey: ['isAdmin', email],
     queryFn: async () => {
-      const res = await fetch(`http://localhost:5000/users/admin-check/${email}`, {
+      const res = await fetch(`https://react-restaurant-server-sable.vercel.app/users/admin-check/${email}`, {
         headers: {
           authorization: `Bearer ${localStorage.getItem('access-token')}`
         }

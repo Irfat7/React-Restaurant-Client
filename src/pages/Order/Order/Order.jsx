@@ -16,6 +16,8 @@ const Order = () => {
     const pizza = menu.filter(item => item.category === 'pizza')
     const drinks = menu.filter(item => item.category === 'drinks')
 
+    console.log(dessert, soup, salad, pizza, drinks)
+
     return (
         <div>
             <Cover imageURL={orderCover} title='Order Food'></Cover>

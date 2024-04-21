@@ -1,5 +1,3 @@
-import { useContext } from "react"
-import { AuthContext } from "../providers/AuthProvider"
 import { useQuery } from "@tanstack/react-query"
 
 const useMenu = () => {
@@ -7,7 +5,7 @@ const useMenu = () => {
     const { data: menu = [], isLoading: isMenuLoading, refetch: refetchMenu} = useQuery({
         queryKey: ['menu'],
         queryFn: async () => {
-            const res = await fetch('http://localhost:5000/menu')
+            const res = await fetch('https://react-restaurant-server-sable.vercel.app/menu')
             const data = res.json()
             return data
         }
